@@ -31,7 +31,7 @@ public class PlatformGenerator : MonoBehaviour {
             SimplePool.Spawn(thePlatforms[selectedPlatform], transform.position, transform.rotation);
 
             if(Random.Range(0f, 100f) < randomCoinChance) {
-                CoinGenerator.instance.SpawnCoins(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z));
+                CoinGenerator.instance.SpawnCoins(new Vector3(transform.position.x, transform.position.y + .05f, transform.position.z));
             }           
 
             transform.position = new Vector3(transform.position.x + (platformWidth / 2), transform.position.y, transform.position.z);
