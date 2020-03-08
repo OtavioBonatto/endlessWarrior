@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
 
     public string GameLevel;
+
+    private void Start() {
+        GameObject.FindGameObjectWithTag("Music").GetComponent<AudioManager>().PlayMusic();
+    }
     
     public void PlayGame() {
         SceneManager.LoadScene(GameLevel);
