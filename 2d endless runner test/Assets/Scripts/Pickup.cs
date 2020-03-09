@@ -19,6 +19,7 @@ public class Pickup : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player") {
             ScoreManager.instance.AddScore(scorePoints);
+            AudioManager.instance.PlaySFX(1);
             gameObject.SetActive(false);
         }
     }

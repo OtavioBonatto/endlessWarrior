@@ -9,19 +9,18 @@ public class LeavesGenerator : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+
     }
 
     // Update is called once per frame
     void Update() {
 
-        float spawnX = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
+        float spawnX = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x * 1.1f);
  
         Vector2 spawnPosition = new Vector2(spawnX, this.transform.position.y);
 
         if(Random.Range(0f, 100f) < randomLeafChance) {
             SimplePool.Spawn(leaf, spawnPosition, leaf.transform.rotation);
         }
-
-        //SimplePool.Spawn(leaf, spawnPosition, leaf.transform.rotation);
     } 
 }

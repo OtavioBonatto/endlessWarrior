@@ -11,7 +11,7 @@ public class DeathMenu : MonoBehaviour {
         GameManager.instance.Reset();
     } 
 
-    public void QuitToMain() {
+    public void QuitToMain() {        
         SceneManager.LoadScene(mainMenuLevel);
     }
 }
