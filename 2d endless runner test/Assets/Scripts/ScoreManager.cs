@@ -9,6 +9,7 @@ public class ScoreManager : MonoBehaviour {
 
     public Text scoreText;
     public Text highScoreText;
+    public Text finalScoreText;
 
     public float scoreCount;
     public float highScoreCount;
@@ -41,6 +42,7 @@ public class ScoreManager : MonoBehaviour {
 
         scoreText.text = "Pontos: " + Mathf.Round(scoreCount);
         highScoreText.text = "Melhor Pontuação: " + Mathf.Round(highScoreCount);
+        finalScoreText.text = "Sua pontuação: " +  Mathf.Round(scoreCount);
     }
 
     public void AddScore(int pointsToAdd) {
