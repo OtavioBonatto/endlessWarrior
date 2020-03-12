@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Endless.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Highscores Menu.unity
+    guid: d4738eafe65fa29459fc0838aaaad0be
   m_configObjects: {}

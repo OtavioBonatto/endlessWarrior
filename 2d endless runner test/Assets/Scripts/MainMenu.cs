@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
 
     public string GameLevel;
+    public string Leaderbords;
 
     private void Start() {
         GameObject.FindGameObjectWithTag("Music").GetComponent<AudioManager>().PlayMusic();
@@ -13,6 +14,10 @@ public class MainMenu : MonoBehaviour {
     
     public void PlayGame() {
         SceneManager.LoadScene(GameLevel);
+    }
+
+    public void LeaderbordsMenu() {
+        SceneManager.LoadScene(Leaderbords);
     }
 
     public void QuitGame() {
