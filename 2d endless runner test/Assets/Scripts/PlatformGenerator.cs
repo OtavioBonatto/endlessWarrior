@@ -35,13 +35,12 @@ public class PlatformGenerator : MonoBehaviour {
                 float gemXpos = Random.Range(transform.position.x - 8f, transform.position.x + 8f);
 
                 CoinGenerator.instance.SpawnCoins(new Vector3(gemXpos, transform.position.y - 2.5f, transform.position.z));
-            }  
+            } else {
 
-            if(Random.Range(0f, 100f) < randomSpikesChance) {
                 float spikeXposition = Random.Range(transform.position.x - 8f, transform.position.x + 8f);
 
                 CoinGenerator.instance.SpawnSpikes(new Vector3(spikeXposition, transform.position.y - 3.3f, transform.position.z));
-            }          
+            }         
 
             transform.position = new Vector3(transform.position.x + (platformWidth / 2), transform.position.y, transform.position.z);
         }

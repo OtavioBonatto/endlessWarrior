@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Advertisements;
 
 public class GameManager : MonoBehaviour {
 
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour {
     void Start() {
         platformStartPoint = platformGenerator.position;
         playerStartPoint = thePlayer.transform.position;
+
+        Advertisement.Initialize("3505425", false);
     }
 
     // Update is called once per frame
@@ -32,7 +35,9 @@ public class GameManager : MonoBehaviour {
         
         ScoreManager.instance.scoreIncreasing = false; 
 
-        thePlayer.gameObject.SetActive(false);   
+        thePlayer.gameObject.SetActive(false);
+
+        Advertisement.Show();
 
         theDeathScreen.gameObject.SetActive(true);  
 
