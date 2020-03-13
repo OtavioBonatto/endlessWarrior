@@ -19,7 +19,7 @@ public class NameTransfer : MonoBehaviour {
     void Start() {
         mobileKeys = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default);
 
-        mobileKeys.active = false;
+        mobileKeys.active = true;
     }
 
     void OnGUI() {
@@ -29,14 +29,16 @@ public class NameTransfer : MonoBehaviour {
             InputField.text = "";
             int theScore = (int)ScoreManager.instance.scoreCount;
             HighScores.AddNewHighscore(theName, theScore);
+            gameObject.SetActive(false);
         }
 
-        if (mobileKeys != null && mobileKeys.status == TouchScreenKeyboard.Status.Done) {
+        if (InputField.text != "" && mobileKeys != null && mobileKeys.status == TouchScreenKeyboard.Status.Done) {
             theName = inputField.GetComponent<Text>().text;
+            Debug.Log(theName);
             InputField.text = "";
             int theScore = (int)ScoreManager.instance.scoreCount;
             HighScores.AddNewHighscore(theName, theScore);
-
+            gameObject.SetActive(false);
         }
     }
 }

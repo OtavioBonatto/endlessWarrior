@@ -8,6 +8,7 @@ public class DeathMenu : MonoBehaviour {
     public string mainMenuLevel;
 
     public void ResetGame() {
+        NameTransfer.instance.gameObject.SetActive(true);
         GameManager.instance.Reset();
     } 
 
