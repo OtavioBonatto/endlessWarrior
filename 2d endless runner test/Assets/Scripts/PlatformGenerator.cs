@@ -9,8 +9,6 @@ public class PlatformGenerator : MonoBehaviour {
     public float distanceBetween;
     private float platformWidth;
 
-    public float distanceBetweenMin;
-    public float distanceBetweenMax;
     private int selectedPlatform;
     public float randomCoinChance;
     public float randomSpikesChance;
@@ -23,7 +21,6 @@ public class PlatformGenerator : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if(transform.position.x < generationPoint.position.x) {
-            distanceBetween = Random.Range(distanceBetweenMin, distanceBetweenMax);
 
             selectedPlatform = Random.Range(0, thePlatforms.Length);
 
@@ -32,12 +29,12 @@ public class PlatformGenerator : MonoBehaviour {
             SimplePool.Spawn(thePlatforms[selectedPlatform], transform.position, transform.rotation);
 
             if(Random.Range(0f, 100f) < randomCoinChance) {
-                float gemXpos = Random.Range(transform.position.x - 8f, transform.position.x + 8f);
+                float gemXpos = Random.Range(transform.position.x - 6f, transform.position.x + 6f);
 
                 CoinGenerator.instance.SpawnCoins(new Vector3(gemXpos, transform.position.y - 2.5f, transform.position.z));
             } else {
 
-                float spikeXposition = Random.Range(transform.position.x - 8f, transform.position.x + 8f);
+                float spikeXposition = Random.Range(transform.position.x - 6f, transform.position.x + 6f);
 
                 CoinGenerator.instance.SpawnSpikes(new Vector3(spikeXposition, transform.position.y - 3.3f, transform.position.z));
             }         

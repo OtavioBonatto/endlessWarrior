@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D theRB;
     public bool onGround;
     public bool death;
+    public bool falling;
     public LayerMask ground;
     private Collider2D myCollider;
     private Animator theAnim;
@@ -90,8 +91,15 @@ public class PlayerController : MonoBehaviour {
             jumpTimeCounter = jumpTime;
         }
 
+        if (theRB.velocity.y < -0.1 && !onGround) {
+            falling = true;
+        } else {
+            falling = false;
+        }
+
         theAnim.SetFloat("Speed", theRB.velocity.x);
         theAnim.SetBool("onGround", onGround);
+        theAnim.SetBool("Falling", falling);
         theAnim.SetBool("Death", death);
     }
 

@@ -398,10 +398,8 @@ MonoBehaviour:
   - {fileID: 8527089520028213841, guid: b0e5e597b34b8ed4cb4138932295246a, type: 3}
   - {fileID: 8527089520028213841, guid: de97ed8a1f49ebe4bbf364523926e82b, type: 3}
   generationPoint: {fileID: 1818878083}
-  distanceBetween: 5e+15
-  distanceBetweenMin: 0.5
-  distanceBetweenMax: 1
-  randomCoinChance: 50
+  distanceBetween: 2
+  randomCoinChance: 25
   randomSpikesChance: 100
 --- !u!4 &116283621
 Transform:
@@ -411,7 +409,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116283619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.46, y: 0.8, z: -2.439453}
+  m_LocalPosition: {x: 8.41, y: 0.8, z: -2.439453}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -477,8 +475,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.7254902, g: 0.37254903, b: 0.37254903, a: 1}
+    m_PressedColor: {r: 0.7254902, g: 0.37254903, b: 0.37254903, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1059,6 +1057,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579042065}
   m_CullTransparentMesh: 0
+--- !u!1 &610548771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 610548773}
+  - component: {fileID: 610548772}
+  m_Layer: 0
+  m_Name: Ad Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &610548772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610548771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b32d92ad0fcba4cb0433ee0257eb46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &610548773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610548771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &638364769
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,7 +1149,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Pontos: 0'
+  m_Text: 'Score: 0'
 --- !u!222 &638364771
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1252,7 +1293,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reiniciar
+  m_Text: Restart
 --- !u!222 &689273931
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1271,6 +1312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824512940}
   - component: {fileID: 824512941}
+  - component: {fileID: 824512942}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -1278,20 +1320,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &824512940
-Transform:
+--- !u!224 &824512940
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824512939}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.786, y: -0.405, z: 20.566406}
+  m_LocalPosition: {x: 0, y: 0, z: 20.566406}
   m_LocalScale: {x: 8.049666, y: 6.937, z: 6.937}
   m_Children: []
   m_Father: {fileID: 1336142093}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 1.74, y: -0.41}
+  m_SizeDelta: {x: NaN, y: 0}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!212 &824512941
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1342,6 +1389,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &824512942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824512939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 0
+  m_AspectRatio: NaN
 --- !u!1 &854782402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,7 +1599,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Seu nome...
+  m_Text: Your name...
 --- !u!222 &1065204396
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1615,7 +1676,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sair
+  m_Text: Main Menu
 --- !u!222 &1093679129
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1758,7 +1819,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Pontua\xE7\xE3o: 1200"
+  m_Text: 'Score: 1200'
 --- !u!222 &1143821921
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1924,7 +1985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leaf: {fileID: 3334429229521780223, guid: c07d622bd78a4394ab6df50f6dcf3e13, type: 3}
-  randomLeafChance: 10
+  randomLeafChance: 2
 --- !u!4 &1223626356
 Transform:
   m_ObjectHideFlags: 0
@@ -2147,8 +2208,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.7254902, g: 0.37254903, b: 0.37254903, a: 1}
+    m_PressedColor: {r: 0.7254902, g: 0.37254903, b: 0.37254903, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2420,7 +2481,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Melhor Pontua\xE7\xE3o: 0"
+  m_Text: 'Highscore: 0'
 --- !u!222 &1887868953
 CanvasRenderer:
   m_ObjectHideFlags: 0

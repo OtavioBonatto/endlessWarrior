@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     private Vector3 playerStartPoint;
     private PlatformDestroyer[] platformList;
     public DeathMenu theDeathScreen;
+    static int loadCount = 0;
 
     private void Awake() {
         instance = this;
@@ -22,8 +23,6 @@ public class GameManager : MonoBehaviour {
     void Start() {
         platformStartPoint = platformGenerator.position;
         playerStartPoint = thePlayer.transform.position;
-
-        Advertisement.Initialize("3505425", false);
     }
 
     // Update is called once per frame
@@ -37,7 +36,11 @@ public class GameManager : MonoBehaviour {
 
         thePlayer.gameObject.SetActive(false);
 
-        Advertisement.Show();
+        if (loadCount % 3 == 0)  // only show ad every third time
+{
+            AdController.instance.ShowAd();
+        }
+        loadCount++;        
 
         theDeathScreen.gameObject.SetActive(true);  
 

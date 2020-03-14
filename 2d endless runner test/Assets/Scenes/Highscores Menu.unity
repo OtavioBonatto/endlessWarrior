@@ -343,7 +343,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Voltar
+  m_Text: Back
 --- !u!222 &105415817
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1037,9 +1037,7 @@ MonoBehaviour:
   - {fileID: 8527089520028213841, guid: b0e5e597b34b8ed4cb4138932295246a, type: 3}
   generationPoint: {fileID: 1284959675}
   distanceBetween: 5e+15
-  distanceBetweenMin: 0.5
-  distanceBetweenMax: 1
-  randomCoinChance: 0
+  randomCoinChance: 100
   randomSpikesChance: 0
 --- !u!4 &886705597
 Transform:
@@ -1383,8 +1381,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.7254902, g: 0.37254903, b: 0.37254903, a: 1}
+    m_PressedColor: {r: 0.7254902, g: 0.37254903, b: 0.37254903, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1516,8 +1514,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -53, y: 305}
-  m_SizeDelta: {x: 831, y: 182.5}
+  m_AnchoredPosition: {x: 0.000022888, y: 311}
+  m_SizeDelta: {x: 1082, y: 182.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1232872242
 MonoBehaviour:
@@ -1550,7 +1548,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Classifica\xE7\xE3o:"
+  m_Text: 'Leaderboards:'
 --- !u!222 &1232872243
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -40,9 +40,9 @@ public class ScoreManager : MonoBehaviour {
             PlayerPrefs.SetFloat("HighScore", highScoreCount);
         }
 
-        scoreText.text = "Pontos: " + Mathf.Round(scoreCount);
-        highScoreText.text = "Melhor Pontuação: " + Mathf.Round(highScoreCount);
-        finalScoreText.text = "Sua pontuação: " +  Mathf.Round(scoreCount);
+        scoreText.text = "Score: " + Mathf.Round(scoreCount);
+        highScoreText.text = "Highscore: " + Mathf.Round(highScoreCount);
+        finalScoreText.text = "Score: " +  Mathf.Round(scoreCount);
     }
 
     public void AddScore(int pointsToAdd) {

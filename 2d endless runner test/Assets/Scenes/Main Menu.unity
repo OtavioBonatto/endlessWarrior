@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.7264151, g: 0.37348703, b: 0.37348703, a: 1}
-    m_PressedColor: {r: 0.290106, g: 0.3136392, b: 0.681, a: 1}
+    m_PressedColor: {r: 0.7254902, g: 0.37254903, b: 0.37254903, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -445,7 +445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Iniciar Jogo
+  m_Text: Start Game
 --- !u!222 &683674012
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -771,7 +771,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.7264151, g: 0.37348703, b: 0.37348703, a: 1}
-    m_PressedColor: {r: 0.290106, g: 0.3136392, b: 0.681, a: 1}
+    m_PressedColor: {r: 0.7254902, g: 0.37254903, b: 0.37254903, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -872,9 +872,7 @@ MonoBehaviour:
   - {fileID: 8527089520028213841, guid: b0e5e597b34b8ed4cb4138932295246a, type: 3}
   generationPoint: {fileID: 1284959675}
   distanceBetween: 5e+15
-  distanceBetweenMin: 0.5
-  distanceBetweenMax: 1
-  randomCoinChance: 0
+  randomCoinChance: 100
   randomSpikesChance: 0
 --- !u!4 &886705597
 Transform:
@@ -951,7 +949,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.7264151, g: 0.37348703, b: 0.37348703, a: 1}
-    m_PressedColor: {r: 0.290106, g: 0.3136392, b: 0.681, a: 1}
+    m_PressedColor: {r: 0.7254902, g: 0.37254903, b: 0.37254903, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1147,7 +1145,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Classifica\xE7\xE3o"
+  m_Text: Leaderboards
 --- !u!222 &1572886978
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1188,7 +1186,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1594,7 +1592,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sair do Jogo
+  m_Text: Quit Game
 --- !u!222 &2007756878
 CanvasRenderer:
   m_ObjectHideFlags: 0
