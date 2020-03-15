@@ -8,6 +8,7 @@ public class CoinGenerator : MonoBehaviour {
 
     public GameObject coin;
     public GameObject spikes;
+    public GameObject blackGem;
 
     private void Awake() {
         instance = this;
@@ -29,5 +30,9 @@ public class CoinGenerator : MonoBehaviour {
 
     public void SpawnSpikes(Vector3 startPosition) {
         SimplePool.Spawn(spikes, startPosition, spikes.transform.rotation);
+    }
+
+    public void SpawnPowerUp(Vector3 startPosition) {
+        SimplePool.Spawn(blackGem, startPosition, spikes.transform.rotation);
     }
 }
